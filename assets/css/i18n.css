@@ -1,0 +1,121 @@
+/* ==========================================================================
+   News Blogs - Internationalization (i18n) & Language Switcher Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+/* Language Switcher Pill in Header Top Links */
+.lang-switcher-wrap {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.dark-theme .lang-switcher-wrap,
+body.dark-theme .lang-switcher-wrap,
+.th-header.dark-theme .lang-switcher-wrap {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 2px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.25s ease-in-out;
+    line-height: 1.4;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.lang-btn.active {
+    background-color: var(--theme-color, #FF1D50);
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(255, 29, 80, 0.35);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--theme-color, #FF1D50);
+}
+
+.lang-sep {
+    font-size: 11px;
+    opacity: 0.4;
+    margin: 0 1px;
+    user-select: none;
+}
+
+/* Mobile Language Switcher inside Drawer */
+.mobile-lang-box {
+    margin: 15px 25px 20px 25px;
+    padding: 12px 15px;
+    background: var(--smoke-color2, #EFF3FA);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-lang-box .lang-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--title-color, #080809);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mobile-lang-box .lang-switcher-wrap {
+    background: #ffffff;
+    margin-left: 0;
+}
+
+/* Tamil Typography Enhancements */
+html[lang="ta"] body {
+    font-family: 'Mukta Malar', 'Poppins', sans-serif !important;
+}
+
+html[lang="ta"] h1,
+html[lang="ta"] h2,
+html[lang="ta"] h3,
+html[lang="ta"] h4,
+html[lang="ta"] h5,
+html[lang="ta"] h6,
+html[lang="ta"] .sec-title,
+html[lang="ta"] .box-title,
+html[lang="ta"] .box-title-50,
+html[lang="ta"] .box-title-40,
+html[lang="ta"] .box-title-30,
+html[lang="ta"] .box-title-24,
+html[lang="ta"] .box-title-22,
+html[lang="ta"] .box-title-20,
+html[lang="ta"] .box-title-18,
+html[lang="ta"] .widget_title {
+    font-family: 'Mukta Malar', 'League Spartan', sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+html[lang="ta"] .main-menu > ul > li > a,
+html[lang="ta"] .main-menu ul.sub-menu li a,
+html[lang="ta"] .th-mobile-menu ul li > a {
+    font-family: 'Mukta Malar', sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+html[lang="ta"] .th-btn {
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: 'Mukta Malar', sans-serif !important;
+}

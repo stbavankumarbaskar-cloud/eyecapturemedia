@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Eye Catch Media - Modern Styles & Minimal Preloader
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Eye Catch Media - Official GIF Preloader
+   -------------------------------------------------------------------------- */
+.preloader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcfbfc !important;
+    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.preloader::before,
+.preloader::after {
+    display: none !important;
+}
+
+.preloader.loaded,
+.preloader.preloader-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.preloader-gif-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.preloader-gif {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Subscription Popup - Eye Catch Media Professional Branding
+   -------------------------------------------------------------------------- */
+.popup-subscribe {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.popup-subscribe .box-img {
+    flex: 0 0 45%;
+    max-width: 45%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+    position: relative;
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.popup-subscribe .box-img img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.08));
+    transition: transform 0.4s ease;
+}
+
+.popup-subscribe:hover .box-img img {
+    transform: scale(1.02);
+}
+
+.popup-subscribe .box-content {
+    flex: 1;
+    padding: 45px 35px;
+    background: #ffffff;
+}
+
+/* Dark mode popup styling */
+.dark-theme .popup-subscribe,
+[data-theme="dark"] .popup-subscribe {
+    background: #131b2e;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme .popup-subscribe .box-img,
+[data-theme="dark"] .popup-subscribe .box-img {
+    background: #ffffff;
+    border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .popup-subscribe .box-content,
+[data-theme="dark"] .popup-subscribe .box-content {
+    background: #131b2e;
+}
+
+.dark-theme .popup-subscribe .widget_title,
+[data-theme="dark"] .popup-subscribe .widget_title {
+    color: #ffffff;
+}
+
+.dark-theme .popup-subscribe .footer-text,
+[data-theme="dark"] .popup-subscribe .footer-text {
+    color: #94a3b8;
+}
+
+.dark-theme .popup-subscribe .popupClose,
+[data-theme="dark"] .popup-subscribe .popupClose {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .popup-subscribe {
+        flex-direction: column;
+        max-width: 92%;
+        margin: 20px auto;
+    }
+    .popup-subscribe .box-img {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        padding: 25px 20px 15px;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    }
+    .popup-subscribe .box-img img {
+        max-height: 160px;
+    }
+    .popup-subscribe .box-content {
+        padding: 25px 20px 30px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Responsive Website Logo Styles
+   -------------------------------------------------------------------------- */
+.header-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-logo a {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Desktop Header Logo */
+.header-middle .header-logo img,
+.header-layout1 .header-logo img {
+    height: 85px;
+    max-height: 90px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header-middle .header-logo:hover img,
+.header-layout1 .header-logo:hover img {
+    transform: scale(1.02);
+}
+
+/* Sticky Navigation Mobile/Tablet Header Logo */
+.menu-area .header-logo img {
+    height: 48px;
+    max-height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Mobile Offcanvas Drawer Menu Logo */
+.th-menu-wrapper .mobile-logo {
+    background: transparent !important;
+    padding: 28px 20px 20px !important;
+}
+
+.th-menu-wrapper .mobile-logo img {
+    height: 75px;
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Footer & Sidemenu Brand Logos */
+.about-logo img,
+.th-widget-about .about-logo img {
+    height: 80px;
+    max-height: 85px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.about-logo:hover img,
+.th-widget-about .about-logo:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .header-middle .header-logo img,
+    .header-layout1 .header-logo img {
+        height: 72px;
+        max-height: 78px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-middle .header-logo img,
+    .header-layout1 .header-logo img {
+        height: 60px;
+        max-height: 65px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-middle .header-logo img,
+    .header-layout1 .header-logo img {
+        height: 50px;
+        max-width: 170px;
+    }
+    .menu-area .header-logo img {
+        height: 42px;
+        max-width: 150px;
+    }
+    .th-menu-wrapper .mobile-logo img {
+        height: 62px;
+        max-height: 68px;
+    }
+}

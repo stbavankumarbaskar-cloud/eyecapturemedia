@@ -1,0 +1,251 @@
+<svg width="340" height="380" viewBox="0 0 340 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shield Metallic Gradient -->
+    <linearGradient id="shieldMetal" x1="40" y1="60" x2="300" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="25%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#64748B"/>
+      <stop offset="75%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <!-- Inner Shield Body Gradient -->
+    <linearGradient id="shieldInner" x1="170" y1="60" x2="170" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Vibrant Red Accent Gradient -->
+    <linearGradient id="vibrantRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A5F"/>
+      <stop offset="100%" stop-color="#D90429"/>
+    </linearGradient>
+
+    <!-- Chrome / Metallic Text Gradient -->
+    <linearGradient id="chromeText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#F1F5F9"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Plaque Face Gradient -->
+    <linearGradient id="plaqueFace" x1="20" y1="140" x2="320" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800;900&amp;family=Mukta+Malar:wght@800;900&amp;display=swap');
+      .sk-news {
+        font-family: 'League Spartan', -apple-system, sans-serif;
+        font-weight: 900;
+        font-size: 15px;
+        letter-spacing: 4px;
+        fill: #FFFFFF;
+      }
+      .sk-catch {
+        font-family: 'League Spartan', -apple-system, sans-serif;
+        font-weight: 900;
+        font-size: 44px;
+        font-style: italic;
+        letter-spacing: 2px;
+      }
+      .sk-tamil {
+        font-family: 'Mukta Malar', 'Noto Sans Tamil', sans-serif;
+        font-weight: 900;
+        font-size: 52px;
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+
+  <!-- ==================== 1. SHIELD BACKPLATE ==================== -->
+  <g filter="url(#dropShadow)">
+    <!-- Outer Metallic Bevel Rim -->
+    <path d="M 45 95 
+             L 105 82 
+             L 170 98 
+             L 235 82 
+             L 295 95 
+             L 282 225 
+             L 170 355 
+             L 58 225 
+             Z" 
+          fill="url(#shieldMetal)" stroke="#020617" stroke-width="2.5"/>
+
+    <!-- Inner Metallic Inset Step -->
+    <path d="M 54 102 
+             L 108 90 
+             L 170 105 
+             L 232 90 
+             L 286 102 
+             L 274 220 
+             L 170 342 
+             L 66 220 
+             Z" 
+          fill="#334155" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Dark Shield Center Field -->
+    <path d="M 60 107 
+             L 110 96 
+             L 170 110 
+             L 230 96 
+             L 280 107 
+             L 268 216 
+             L 170 334 
+             L 72 216 
+             Z" 
+          fill="url(#shieldInner)"/>
+
+    <!-- Center Bevel Ridge Line -->
+    <line x1="170" y1="110" x2="170" y2="334" stroke="#64748B" stroke-width="2" opacity="0.6"/>
+
+    <!-- Left Facet Shading (Pencil-style crosshatch/shade) -->
+    <path d="M 72 216 L 170 334 L 170 240 Z" fill="#000000" opacity="0.35"/>
+    <!-- Right Facet Metallic Sheen -->
+    <path d="M 268 216 L 170 334 L 170 240 Z" fill="#FFFFFF" opacity="0.08"/>
+  </g>
+
+  <!-- ==================== 2. NETWORK GLOBE & ORBIT ==================== -->
+  <g id="globeComponent" transform="translate(170, 92)">
+    <!-- Globe Base Spherical Gradient -->
+    <circle cx="0" cy="0" r="54" fill="#0F172A" stroke="url(#shieldMetal)" stroke-width="3" filter="url(#dropShadow)"/>
+    <circle cx="0" cy="0" r="51" fill="url(#shieldInner)"/>
+
+    <!-- Latitude / Longitude Vector Grid -->
+    <ellipse cx="0" cy="0" rx="50" ry="20" fill="none" stroke="#64748B" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.75"/>
+    <ellipse cx="0" cy="0" rx="28" ry="50" fill="none" stroke="#64748B" stroke-width="1.2" opacity="0.75"/>
+    <line x1="-50" y1="0" x2="50" y2="0" stroke="#64748B" stroke-width="1.2" opacity="0.75"/>
+    <line x1="0" y1="-50" x2="0" y2="50" stroke="#64748B" stroke-width="1.2" opacity="0.75"/>
+
+    <!-- Digital Network Vertices / Connectivity Lines -->
+    <g stroke="#94A3B8" stroke-width="1.4" opacity="0.85">
+      <line x1="-26" y1="-20" x2="0" y2="-35"/>
+      <line x1="0" y1="-35" x2="28" y2="-18"/>
+      <line x1="-26" y1="-20" x2="-12" y2="6"/>
+      <line x1="-12" y1="6" x2="24" y2="8"/>
+      <line x1="28" y1="-18" x2="24" y2="8"/>
+      <line x1="-12" y1="6" x2="0" y2="34"/>
+      <line x1="24" y1="8" x2="0" y2="34"/>
+      <line x1="28" y1="-18" x2="42" y2="2"/>
+      <line x1="24" y1="8" x2="42" y2="2"/>
+    </g>
+
+    <!-- Network Glowing Hub Nodes -->
+    <circle cx="-26" cy="-20" r="3.8" fill="#FF1D50"/>
+    <circle cx="0" cy="-35" r="4.2" fill="#FFFFFF"/>
+    <circle cx="28" cy="-18" r="3.8" fill="#FF1D50"/>
+    <circle cx="-12" cy="6" r="4" fill="#FFFFFF"/>
+    <circle cx="24" cy="8" r="4.2" fill="#FCD34D"/>
+    <circle cx="42" cy="2" r="3.2" fill="#FFFFFF"/>
+    <circle cx="0" cy="34" r="3.8" fill="#FF1D50"/>
+
+    <!-- Orbital Swoosh Ring (Encircling globe from left to top right) -->
+    <path d="M -64 22 
+             C -52 48, 38 42, 68 -20 
+             C 60 -30, -26 -10, -64 22 
+             Z" 
+          fill="url(#vibrantRed)" opacity="0.95"/>
+    <path d="M -64 22 C -44 40, 36 36, 66 -18" 
+          fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Broadcast Signal Waves (Top Right) -->
+    <g transform="translate(46, -48)">
+      <path d="M 0 24 A 24 24 0 0 1 24 0" fill="none" stroke="#FF1D50" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 0 36 A 36 36 0 0 1 36 0" fill="none" stroke="#FCD34D" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 0 48 A 48 48 0 0 1 48 0" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ==================== 3. "NEWS" ARCHED BANNER ==================== -->
+  <g transform="translate(170, 126)" filter="url(#dropShadow)">
+    <path d="M -60 0 
+             Q 0 -9 60 0 
+             L 54 22 
+             Q 0 14 -54 22 
+             Z" 
+          fill="#D90429" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="0" y="16" text-anchor="middle" class="sk-news">NEWS</text>
+  </g>
+
+  <!-- ==================== 4. MAIN PLAQUE BANNER: "I CATCH" ==================== -->
+  <g id="catchPlaque" filter="url(#dropShadow)">
+    <!-- 3D Lower Extrusion Drop Edge -->
+    <path d="M 12 152 
+             L 328 152 
+             L 314 204 
+             L 26 204 
+             Z" 
+          fill="#05080E" stroke="#000000" stroke-width="1.5"/>
+
+    <!-- Outer Metallic Beveled Frame -->
+    <path d="M 14 142 
+             L 326 142 
+             L 314 196 
+             L 26 196 
+             Z" 
+          fill="url(#shieldMetal)" stroke="#FFFFFF" stroke-width="2"/>
+
+    <!-- Plaque Dark Core Face -->
+    <path d="M 20 146 
+             L 320 146 
+             L 310 192 
+             L 30 192 
+             Z" 
+          fill="url(#plaqueFace)"/>
+
+    <!-- Inner Highlights -->
+    <line x1="22" y1="148" x2="318" y2="148" stroke="#94A3B8" stroke-width="1.2"/>
+    <line x1="32" y1="190" x2="308" y2="190" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- "I CATCH" 3D Beveled Text -->
+    <!-- Black Drop Shadow -->
+    <text x="173" y="184" text-anchor="middle" class="sk-catch" fill="#000000" opacity="0.9">I CATCH</text>
+    <!-- Deep Red Extrusion Stroke -->
+    <text x="170" y="181" text-anchor="middle" class="sk-catch" fill="none" stroke="#D90429" stroke-width="6" stroke-linejoin="round">I CATCH</text>
+    <!-- Front Face Metallic Gradient Fill -->
+    <text x="170" y="181" text-anchor="middle" class="sk-catch" fill="url(#chromeText)" stroke="#FFFFFF" stroke-width="1.2">I CATCH</text>
+  </g>
+
+  <!-- ==================== 5. LOWER TAMIL SCRIPT: "தமிழ்" ==================== -->
+  <g id="tamilScriptPlaque" transform="translate(170, 252)" filter="url(#dropShadow)">
+    <!-- Outer Contour Badge Frame -->
+    <path d="M -105 -25
+             Q 0 -34 105 -25
+             L 98 25
+             Q 60 38 0 28
+             Q -60 38 -98 25
+             Z" 
+          fill="#0B132B" stroke="url(#shieldMetal)" stroke-width="2.5"/>
+    
+    <!-- Red Inner Border -->
+    <path d="M -100 -21
+             Q 0 -30 100 -21
+             L 93 21
+             Q 56 34 0 24
+             Q -56 34 -93 21
+             Z" 
+          fill="#1C2541" stroke="#FF1D50" stroke-width="1.8"/>
+
+    <!-- Tamil Typography: "தமிழ்" -->
+    <!-- Black Drop Shadow -->
+    <text x="2" y="16" text-anchor="middle" class="sk-tamil" fill="#000000" opacity="0.95">தமிழ்</text>
+    <!-- Outer White Contour Stroke -->
+    <text x="0" y="13" text-anchor="middle" class="sk-tamil" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round">தமிழ்</text>
+    <!-- Metallic Inner Fill -->
+    <text x="0" y="13" text-anchor="middle" class="sk-tamil" fill="url(#chromeText)">தமிழ்</text>
+  </g>
+
+  <!-- ==================== 6. BOTTOM SHIELD POINT ACCENT ==================== -->
+  <g transform="translate(170, 340)">
+    <polygon points="0,-22 8,-8 0,4 -8,-8" fill="url(#vibrantRed)" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+</svg>
